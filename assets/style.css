@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+html {
+    background-image: url(image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Spartan' ;
+    font-weight: lighter;
+    position: relative;
+    top: 170px;
+    font-size: 70px;
+}
+
+input, button {
+    position: relative;
+    top: 200px;
+    height: 40px;
+}
+
+button {
+    width: 78px;
+    background-color: khaki;
+    font-family: 'Varela Round';
+}
+
+input {
+    background-color: lightgoldenrodyellow;
+}
+
+::placeholder {
+    font-family: 'Varela Round' ;
+    color: rgb(32, 32, 32);
+}
+
+body {
+    font-family: 'Varela Round' ;
+    text-align: center;
+}
