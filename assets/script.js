@@ -7,12 +7,8 @@ const apiKey = "a87a1aae56bf2c77a16308f0fc06d6b4";
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  console.log('wtf')
-  const listItems = list.querySelectorAll(".ajax-section .city");
   const inputVal = input.value;
-
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial`;
 
   fetch(url)
     .then(response => response.json())
@@ -29,7 +25,7 @@ form.addEventListener("submit", e => {
           <span>${name}</span>
           <sup>${sys.country}</sup>
         </h2>
-        <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+        <div class="city-temp">${Math.round(main.temp)}<sup>°F</sup></div>
         <figure>
           <img class="city-icon" src=${icon} alt=${weather[0]["main"]}>
           <figcaption>${weather[0]["description"]}</figcaption>
@@ -39,7 +35,7 @@ form.addEventListener("submit", e => {
       list.appendChild(li);
     })
     .catch(() => {
-      msg.textContent = "Please search for a valid city 😩";
+      msg.textContent = "That city does not exist!";
     });
 
   msg.textContent = "";

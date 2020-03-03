@@ -15,13 +15,13 @@ h1 {
     font-family: 'Spartan' ;
     font-weight: lighter;
     position: relative;
-    top: 170px;
+    top: 25px;
     font-size: 70px;
 }
 
 input, button {
     position: relative;
-    top: 200px;
+    top: 40px;
     height: 40px;
 }
 
@@ -51,16 +51,16 @@ body {
   
   .ajax .cities {
     display: grid;
-    grid-gap: 32px 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   
   .ajax .city {
     position: relative;
     padding: 40px 10%;
     border-radius: 20px;
-    background: var(--text_light);
-    color: var(--text_med);
+    background-image: url(image2.jpg);
+    box-shadow:black 10px 5px;
+    margin: 20px;
   }
   
   .ajax .city::after {
@@ -68,19 +68,17 @@ body {
     width: 90%;
     height: 50px;
     position: absolute;
-    bottom: -12px;
-    left: 5%;
+    bottom: -60px;
     z-index: -1;
     opacity: 0.3;
     border-radius: 20px;
-    background: var(--text_light);
+    margin: 20px;
   }
   
   .ajax .city-temp {
     font-size: 5rem;
     font-weight: bold;
     margin-top: 10px;
-    color: var(--text_dark);
   }
   
   .ajax .city sup {
@@ -90,8 +88,6 @@ body {
   .ajax .city-name sup {
     padding: 0.2em 0.6em;
     border-radius: 30px;
-    color: var(--text_light);
-    background: var(--orange);
   }
   
   .ajax .city-icon {
